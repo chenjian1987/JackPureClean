@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{84ad00c8-cd07-49c7-9689-cf4cdde6f92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Assert">
+      <UniqueIdentifier>{89269394-c809-4378-9ef5-7f120f45dd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Define">
+      <UniqueIdentifier>{4c98697a-001f-48cf-acd1-f1b9e6c482de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Debug">
+      <UniqueIdentifier>{039f7a5b-66f1-4011-b344-e017fcc8e6e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Event">
+      <UniqueIdentifier>{cd0f28e7-88d0-4fc6-97ff-66280b3d935a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\FilePath">
+      <UniqueIdentifier>{6b927adf-2599-44d3-9db4-bd72bda18aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\String">
+      <UniqueIdentifier>{84dabc78-b6d1-469a-b816-3534bee7f873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Log">
+      <UniqueIdentifier>{f6b8bde2-1681-4a90-a255-e5e738e05bd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Object">
+      <UniqueIdentifier>{1dd5943b-855e-4168-83c0-89970047c7ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Config">
+      <UniqueIdentifier>{cd9da77e-6076-4d35-9686-24dcb7d92584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\MD5">
+      <UniqueIdentifier>{a93c0935-b874-48f9-b394-5e4d9767b100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Ptr">
+      <UniqueIdentifier>{466d8644-3c9b-4313-aa9e-f44a0f3fdc95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Color">
+      <UniqueIdentifier>{22933756-62d4-4e8e-a5cc-59431fa1995d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Time">
+      <UniqueIdentifier>{b18303c5-1bfe-430d-b1ab-85386b126165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Zip">
+      <UniqueIdentifier>{8c0180f7-9296-4e19-83fe-ac147b2e7866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Guid">
+      <UniqueIdentifier>{502d1c53-b222-4ddf-845f-2821fa8b60af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Param">
+      <UniqueIdentifier>{85a1f379-4f25-4437-b169-613ac3741a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{daeadffe-95e5-425c-a658-c66c0793e25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Assert">
+      <UniqueIdentifier>{5b558545-e265-4159-bc41-1e2d6056168e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Color">
+      <UniqueIdentifier>{aff5f226-7ff7-4dd0-b69c-6ee539cd5140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Config">
+      <UniqueIdentifier>{ce55e25c-d500-471f-a50b-441d4b0b287d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Debug">
+      <UniqueIdentifier>{e75c3495-e6a9-46ea-a6d0-a0d08e06759d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Log">
+      <UniqueIdentifier>{1980c09f-6396-4d03-ad42-8c16e2a612bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FilePath">
+      <UniqueIdentifier>{1da4bcc1-9237-4a02-92fc-a68efa94396e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Param">
+      <UniqueIdentifier>{a93593a4-7f60-4f69-80a1-a2e663feadfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Event">
+      <UniqueIdentifier>{538a1dbe-39c9-4119-a0de-65b189020c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Ptr">
+      <UniqueIdentifier>{51566731-b680-484e-b4b3-8d60eda55573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\String">
+      <UniqueIdentifier>{bc2ea789-f85d-489f-85e5-1b0586ff33f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Zip">
+      <UniqueIdentifier>{1bff1664-933a-46de-a10f-3e8a5b683e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Time">
+      <UniqueIdentifier>{2908984a-40c5-4efe-ac2d-2c309a19f7ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\base64.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ClassId.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CompressHelper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CompressHelperFactory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CrashHelper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DelegateHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ElementId.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EnvironmentVariables.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OneTimeInitializer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RawMemory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RegenDataId.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RuntimeId.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ShellUtils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Singleton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\SqlitUtil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StatusProgressBarChangeEventArgs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StlContainerUtils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\SystemInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\VirtualKeyDef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\AssertHelper.h">
+      <Filter>include\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\jackc_assert.h">
+      <Filter>include\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\jackc_cassert.h">
+      <Filter>include\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCAssert.h">
+      <Filter>include\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCDefines.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCDevService.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugCrash.h">
+      <Filter>include\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugMessage.h">
+      <Filter>include\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugMessageImpl.h">
+      <Filter>include\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Event.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EventNoSender.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEvent.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEventArgs.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEventHandler.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogDefinition.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogFactory.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEvent.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEventArgs.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEventHandler.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IEvent.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IEventArgs.h">
+      <Filter>include\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FilePath.h">
+      <Filter>include\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FilePathManager.h">
+      <Filter>include\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FileSystem.h">
+      <Filter>include\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FileUtils.h">
+      <Filter>include\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FontPath.h">
+      <Filter>include\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCString.h">
+      <Filter>include\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JsonUtils.h">
+      <Filter>include\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StringUtils.h">
+      <Filter>include\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Log.h">
+      <Filter>include\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogBase.h">
+      <Filter>include\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogIndentSetter.h">
+      <Filter>include\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogManager.h">
+      <Filter>include\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogType.h">
+      <Filter>include\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCNew.h">
+      <Filter>include\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCQuickCast.h">
+      <Filter>include\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IObject.h">
+      <Filter>include\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\BasicConfigUtils.h">
+      <Filter>include\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\BehaviorConfig.h">
+      <Filter>include\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IBehaviorConfig.h">
+      <Filter>include\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IConfigRecord.h">
+      <Filter>include\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Md5.h">
+      <Filter>include\MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCMd5.h">
+      <Filter>include\MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCTypeDefs.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IDebugWarningDisplayer.h">
+      <Filter>include\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CommonHeader.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCCastHeader.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCApiDeclaration.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OwnerPtr.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OwnerPtrValueLessComparer.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\TransferOwnership.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\WeakPtr.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\WeakReferenceable.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ConfigRecord.h">
+      <Filter>include\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EnableCompileWarning_The_LAST_IncludeInCpp.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\UniqueString.h">
+      <Filter>include\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Color.h">
+      <Filter>include\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCColorUtils.h">
+      <Filter>include\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCTimer.h">
+      <Filter>include\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DateTime.h">
+      <Filter>include\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ZipUtils.h">
+      <Filter>include\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ZLibCompressHelper.h">
+      <Filter>include\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCCastSource.h">
+      <Filter>include\Ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCGuid.h">
+      <Filter>include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CommandParameters.h">
+      <Filter>include\Param</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Constants.h">
+      <Filter>include\Param</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DevServiceHeaders.h">
+      <Filter>include\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="include\simdutf8check.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\base64.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCMd5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ClassId.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CompressHelperFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Constants.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CrashHelper.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCGuid.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ElementId.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Md5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ModuleName.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RawMemory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RuntimeId.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ShellUtils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StlContainerUtils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AssertHelper.cpp">
+      <Filter>Source\Assert</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCColorUtils.cpp">
+      <Filter>Source\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Color.cpp">
+      <Filter>Source\Color</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BasicConfigUtils.cpp">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BehaviorConfig.cpp">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ConfigRecord.cpp">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IConfigRecord.cpp">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IBehaviorConfig.cpp">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCAssert.cpp">
+      <Filter>Source\Assert</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DebugMessage.cpp">
+      <Filter>Source\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DebugMessageImpl.cpp">
+      <Filter>Source\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IDebugWarningDisplayer.cpp">
+      <Filter>Source\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Log.cpp">
+      <Filter>Source\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LogBase.cpp">
+      <Filter>Source\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LogManager.cpp">
+      <Filter>Source\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FilePath.cpp">
+      <Filter>Source\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FilePathManager.cpp">
+      <Filter>Source\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FileSystem.cpp">
+      <Filter>Source\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FileUtils.cpp">
+      <Filter>Source\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FontPath.cpp">
+      <Filter>Source\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CommandParameters.cpp">
+      <Filter>Source\Param</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IEvent.cpp">
+      <Filter>Source\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IEventArgs.cpp">
+      <Filter>Source\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IProgressDialogFactory.cpp">
+      <Filter>Source\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IStatusProgressBarChangeEvent.cpp">
+      <Filter>Source\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StatusProgressBarChangeEventArgs.cpp">
+      <Filter>Source\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\WeakReferenceable.cpp">
+      <Filter>Source\Ptr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IObject.cpp">
+      <Filter>Source\Ptr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JsonUtils.cpp">
+      <Filter>Source\String</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StringUtils.cpp">
+      <Filter>Source\String</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UniqueString.cpp">
+      <Filter>Source\String</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZipUtil.cpp">
+      <Filter>Source\Zip</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZLibCompressHelper.cpp">
+      <Filter>Source\Zip</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCString.cpp">
+      <Filter>Source\String</Filter>
+    </ClCompile>
+    <ClCompile Include="source\JackCTimer.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DateTime.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

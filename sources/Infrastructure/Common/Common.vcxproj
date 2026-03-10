@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0AB9CF43-D8E6-43C6-992C-CC3A4D9B6913}</ProjectGuid>
+    <RootNamespace>Common</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v145</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(JACKC_SOLUTION_BIN_DIR)\</OutDir>
+    <IntDir>$(JACKC_BUILD_OUTPUT_DIR)\$(TargetName).dir\$(Configuration)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>JackC$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <OutputFile>$(JACKC_SOLUTION_BIN_DIR)\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(JACKC_SOLUTION_PDB_DIR)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;shlwapi.lib;pugixml.lib;jsoncpp.lib;zlibwapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(JACKC_PUGXML_LIB_DIR);$(JACKC_JSONCPP_LIB_DIR);$(JACKC_ZLIB_LIB_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>$(JACKC_SOLUTION_LIB_DIR)/$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ClCompile>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(JACKC_SOLUTION_INC_DIR)\Infrastructure\Common;$(JACKC_SOLUTION_INC_DIR)\Infrastructure\Math;$(JACKC_PUGXML_INC_DIR);$(JACKC_JSONCPP_INC_DIR);$(JACKC_SOLUTION_SOURCE_DIR)\Infrastructure\Common\include;$(JACKC_ZLIB_INC_DIR)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>JACKC_COMMON_HOME;_WIN64;ANAV_PORT;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <Optimization>Disabled</Optimization>
+      <WarningLevel>Level4</WarningLevel>
+      <ConformanceMode>false</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\AssertHelper.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\base64.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\BasicConfigUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\BehaviorConfig.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCApiDeclaration.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCAssert.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCCastHeader.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCCastSource.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCColorUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCDefines.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCDevService.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCMd5.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCNew.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCQuickCast.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCString.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCTimer.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCTypeDefs.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\jackc_assert.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\jackc_cassert.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ClassId.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Color.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CommandParameters.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CommonHeader.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CompressHelper.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CompressHelperFactory.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ConfigRecord.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Constants.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\CrashHelper.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JackCGuid.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DateTime.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugCrash.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugMessage.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DebugMessageImpl.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DelegateHandler.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\DevServiceHeaders.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ElementId.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EnableCompileWarning_The_LAST_IncludeInCpp.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EnvironmentVariables.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Event.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\EventNoSender.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FilePath.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FilePathManager.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FileSystem.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FileUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\FontPath.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IBehaviorConfig.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IConfigRecord.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IDebugWarningDisplayer.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IEvent.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IEventArgs.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IObject.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEvent.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEventArgs.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogChangeEventHandler.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogDefinition.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IProgressDialogFactory.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEvent.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEventArgs.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\IStatusProgressBarChangeEventHandler.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\JsonUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Log.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogBase.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogIndentSetter.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogManager.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\LogType.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Md5.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OneTimeInitializer.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OwnerPtr.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\OwnerPtrValueLessComparer.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RawMemory.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RegenDataId.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\RuntimeId.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ShellUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\Singleton.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\SqlitUtil.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StatusProgressBarChangeEventArgs.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StlContainerUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\StringUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\SystemInfo.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\TransferOwnership.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\UniqueString.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\VirtualKeyDef.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\WeakPtr.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\WeakReferenceable.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ZipUtils.h" />
+    <ClInclude Include="..\..\..\Include\Infrastructure\Common\ZLibCompressHelper.h" />
+    <ClInclude Include="include\simdutf8check.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AssertHelper.cpp" />
+    <ClCompile Include="source\base64.cpp" />
+    <ClCompile Include="source\BasicConfigUtils.cpp" />
+    <ClCompile Include="source\BehaviorConfig.cpp" />
+    <ClCompile Include="source\JackCAssert.cpp" />
+    <ClCompile Include="source\JackCColorUtils.cpp" />
+    <ClCompile Include="source\JackCMd5.cpp" />
+    <ClCompile Include="source\JackCString.cpp" />
+    <ClCompile Include="source\JackCTimer.cpp" />
+    <ClCompile Include="source\ClassId.cpp" />
+    <ClCompile Include="source\Color.cpp" />
+    <ClCompile Include="source\CommandParameters.cpp" />
+    <ClCompile Include="source\CompressHelperFactory.cpp" />
+    <ClCompile Include="source\ConfigRecord.cpp" />
+    <ClCompile Include="source\Constants.cpp" />
+    <ClCompile Include="source\CrashHelper.cpp" />
+    <ClCompile Include="source\JackCGuid.cpp" />
+    <ClCompile Include="source\DateTime.cpp" />
+    <ClCompile Include="source\DebugMessage.cpp" />
+    <ClCompile Include="source\DebugMessageImpl.cpp" />
+    <ClCompile Include="source\ElementId.cpp" />
+    <ClCompile Include="source\FilePath.cpp" />
+    <ClCompile Include="source\FilePathManager.cpp" />
+    <ClCompile Include="source\FileSystem.cpp" />
+    <ClCompile Include="source\FileUtils.cpp" />
+    <ClCompile Include="source\FontPath.cpp" />
+    <ClCompile Include="source\IBehaviorConfig.cpp" />
+    <ClCompile Include="source\IConfigRecord.cpp" />
+    <ClCompile Include="source\IDebugWarningDisplayer.cpp" />
+    <ClCompile Include="source\IEvent.cpp" />
+    <ClCompile Include="source\IEventArgs.cpp" />
+    <ClCompile Include="source\IObject.cpp" />
+    <ClCompile Include="source\IProgressDialogFactory.cpp" />
+    <ClCompile Include="source\IStatusProgressBarChangeEvent.cpp" />
+    <ClCompile Include="source\JsonUtils.cpp" />
+    <ClCompile Include="source\Log.cpp" />
+    <ClCompile Include="source\LogBase.cpp" />
+    <ClCompile Include="source\LogManager.cpp" />
+    <ClCompile Include="source\Md5.cpp" />
+    <ClCompile Include="source\ModuleName.cpp" />
+    <ClCompile Include="source\RawMemory.cpp" />
+    <ClCompile Include="source\RuntimeId.cpp" />
+    <ClCompile Include="source\ShellUtils.cpp" />
+    <ClCompile Include="source\StatusProgressBarChangeEventArgs.cpp" />
+    <ClCompile Include="source\StlContainerUtils.cpp" />
+    <ClCompile Include="source\StringUtils.cpp" />
+    <ClCompile Include="source\UniqueString.cpp" />
+    <ClCompile Include="source\WeakReferenceable.cpp" />
+    <ClCompile Include="source\ZipUtil.cpp" />
+    <ClCompile Include="source\ZLibCompressHelper.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
