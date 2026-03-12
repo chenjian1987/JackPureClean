@@ -5,6 +5,12 @@
 #include <QFile>
 
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#include <shellapi.h>
+#pragma comment(lib, "shell32.lib") 
+#endif
+
 
 ScannerWorker::ScannerWorker(QObject* parent) : QObject(parent), m_isPaused(false), m_isCancelled(false) {}
 
@@ -93,11 +99,9 @@ void ScannerWorker::doScan(const QString& targetDir)
             emit progressUpdated((count % 100));
         }
     }
-
     emit progressUpdated(100);
     emit scanFinished(count, formatSize(totalSizeBytes));
 }
-
 
 void ScannerWorker::doClean(const QStringList& filesToDelete)
 {
@@ -124,6 +128,34 @@ void ScannerWorker::doClean(const QStringList& filesToDelete)
             emit progressUpdated(static_cast<int>((i + 1) * 100 / filesToDelete.size()));
         }
     }
-
+    emptyRecycleBin();
     emit cleanFinished(successCount, skipCount);
+}
+
+void ScannerWorker::emptyRecycleBin()
+{
+    emit statusUpdated(QStringLiteral("当前状态: 正在清空系统回收站..."));
+
+#ifdef Q_OS_WIN
+    // 参数含义:
+    // hWnd: 父窗口句柄 (NULL 即可)
+    // pszRootPath: 指定盘符的回收站 (NULL 表示清空所有盘符的回收站)
+    // dwFlags: 控制标志
+    HRESULT result = SHEmptyRecycleBin(
+        NULL,
+        NULL,
+        SHERB_NOCONFIRMATION | SHERB_NOPROGRESSUI | SHERB_NOSOUND 
+    );
+
+    if (result == S_OK) 
+    {
+        emit statusUpdated(QStringLiteral("回收站清理完成！"));
+    }
+    else 
+    {
+        emit statusUpdated(QStringLiteral("回收站清理失败或已被清空。"));
+    }
+#else
+    emit statusUpdated(QStringLiteral("当前系统不支持原生清理回收站。"));
+#endif
 }

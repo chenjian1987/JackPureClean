@@ -25,6 +25,7 @@ public:
 public slots:
     void doScan(const QString& targetDir);
     void doClean(const QStringList& filesToDelete); 
+    void emptyRecycleBin();
 
 signals:
     void fileFound(const QString& name, const QString& path, const QString& timeStr, const QString& sizeStr);
