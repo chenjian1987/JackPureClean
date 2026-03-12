@@ -3,10 +3,43 @@
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QStandardPaths>
+#include <QIcon>
+#include <QCoreApplication>
+#include <QFile>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget* parent)
     : QWidget(parent), m_currentState(IDLE), m_isPaused(false)
 {
+    // 设置窗口图标 - 使用绝对路径，尝试PNG和ICO
+    QString basePath = QCoreApplication::applicationDirPath() + "/Resource/JackCAD";
+    QString pngPath = basePath + ".png";
+    QString icoPath = basePath + ".ico";
+
+    qDebug() << "[MainWindow] PNG path:" << pngPath;
+    qDebug() << "[MainWindow] ICO path:" << icoPath;
+    qDebug() << "[MainWindow] PNG exists:" << QFile::exists(pngPath);
+    qDebug() << "[MainWindow] ICO exists:" << QFile::exists(icoPath);
+
+    // 优先使用PNG，如果失败则使用ICO
+    QIcon icon;
+    if (QFile::exists(pngPath)) {
+        icon = QIcon(pngPath);
+        qDebug() << "[MainWindow] Loading PNG icon";
+    } else if (QFile::exists(icoPath)) {
+        icon = QIcon(icoPath);
+        qDebug() << "[MainWindow] Loading ICO icon";
+    }
+
+    qDebug() << "[MainWindow] Icon is null:" << icon.isNull();
+
+    if (!icon.isNull()) {
+        setWindowIcon(icon);
+        qDebug() << "[MainWindow] Window icon set";
+    } else {
+        qDebug() << "[MainWindow] Failed to load icon";
+    }
+
     setupUI();
 
     m_workerThread = new QThread(this);

@@ -4,7 +4,9 @@
       "Bash(msbuild:*)",
       "Bash(powershell:*)",
       "Bash(iconv:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)"
     ]
   }
 }

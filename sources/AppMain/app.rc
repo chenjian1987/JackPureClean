@@ -1,0 +1,4 @@
+#include <windows.h>
+
+// 应用程序图标
+IDI_APPICON ICON "JackCAD.ico"
