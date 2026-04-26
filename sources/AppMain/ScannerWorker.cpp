@@ -277,6 +277,7 @@ QStringList ScannerWorker::compressDeleteList(const QStringList& inputPaths) con
         QString normalizedPath;
         bool isDir;
     };
+    
     QVector<PathItem> items;
     QSet<QString> uniqueSet;
 
